@@ -7,7 +7,21 @@ public class MakeStars{
     }
 
       //as the string that you read from
-    
+      Scanner n = new Scanner( System.in );
+      while (n.hasNextLine()){
+        String result = "";
+        Scanner line = new Scanner (n.nextLine());
+        while (line.hasNext()){
+          String word = line.next();
+          for (int i = 0; i<word.length(); i++){
+          result += ("*");
+        }
+        result +=(" ");
+      }
+
+        System.out.println(result);
+      }
+System.out.println("");
 
       //use hasNextLine()/nextLine() to loop over
       //all of the data
