@@ -24,6 +24,36 @@ public class PigLatin{
   public static void main( String[]args ){
 
 
+        String in = "";
+        for (int i = 0; i < args.length; i++) {
+            in += args[i];
+        }
+
+          //as the string that you read from
+          Scanner n = new Scanner( System.in );
+
+          while (n.hasNextLine()){
+            Scanner line = new Scanner( n.nextLine());
+            String result = "";
+            while (line.hasNext()){
+            String word = line.next().toLowerCase();
+
+            int fl = (int)word.charAt(0);
+            int ll = (int) word.charAt(word.length()-1);
+            String ft = word;
+            if (word.length()>2){
+              ft = word.substring(0,2);
+            }
+            if (isLetter(fl)) {
+              if (isVowel(fl)){
+                if(isLetter(ll)){
+                  result += word + "hay ";
+                }
+                else{
+                  result += word.substring(0,word.length()-1) + "hay" + word.charAt(word.length()-1) + " ";
+                }
+            }
+        
       //use hasNextLine()/nextLine() to loop over
       //all of the data
 
