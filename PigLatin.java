@@ -63,7 +63,12 @@ public class PigLatin{
               }
             }
             else{
-              
+              if(isLetter(ll)){
+                result += word.substring(1,word.length()) + word.charAt(0) + "ay ";
+              }
+              else{
+                result += word.substring(1,word.length()-1) + word.charAt(0)  + "ay" + word.charAt(word.length()-1) + " ";
+              }
             }
 
             }
