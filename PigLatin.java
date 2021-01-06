@@ -53,7 +53,26 @@ public class PigLatin{
                   result += word.substring(0,word.length()-1) + "hay" + word.charAt(word.length()-1) + " ";
                 }
             }
-        
+            else {
+            if (isSpecial(ft)){
+              if(isLetter(ll)){
+                result += word.substring(2,word.length()) + ft + "ay ";
+              }
+              else{
+                result += word.substring(2,word.length()-1) + ft  + "ay" + word.charAt(word.length()-1) + " ";
+              }
+            }
+            else{
+              
+            }
+
+            }
+
+            }
+          }
+          System.out.println(result);
+        }
+    System.out.println("");
       //use hasNextLine()/nextLine() to loop over
       //all of the data
 
